@@ -10,7 +10,7 @@
     <keywords>paypal, sdk, payments</keywords>
     <license>BSD License, see LICENSE.md for details</license>
     <engines>
-            <engine name="cordova" version="&gt;=3.0.0" />
+            <engine name="cordova" version=">=3.0.0" />
     </engines>
 
 
