@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.3.2
+//  Version 2.8.5
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -49,7 +49,6 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL acceptCreditCards;
 
-
 /// For single payments, options for the shipping address.
 /// - PayPalShippingAddressOptionNone: no shipping address applies.
 /// - PayPalShippingAddressOptionProvided: shipping address will be provided by your app,
@@ -86,7 +85,7 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 ///
 /// These localizations are currently included:
-/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
+/// ar,da,de,en,en_AU,en_GB,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 /// Normally, the SDK blurs the screen when the app is backgrounded,
@@ -94,6 +93,10 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// If your app already does its own blurring upon backgrounding, you might choose to disable this.
 /// Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL disableBlurWhenBackgrounding;
+
+/// If you will present the SDK's view controller within a popover, then set this property to YES.
+/// Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL presentingInPopover;
 
 /// Sandbox credentials can be difficult to type on a mobile device. Setting this flag to YES will
 /// cause the sandboxUserPassword and sandboxUserPin to always be pre-populated into login fields.
