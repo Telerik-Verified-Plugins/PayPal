@@ -1,6 +1,6 @@
 //
 //  CardIOPaymentViewController.h
-//  Version 5.0.2
+//  Version 5.3.1
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //
@@ -78,6 +78,13 @@
 /// Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL suppressScannedCardImage;
 
+/// After a successful scan, card.io will display an image of the card with
+/// the computed card number superimposed. This property controls how long (in seconds)
+/// that image will be displayed.
+/// Set this to 0.0 to suppress the display entirely.
+/// Defaults to 0.1.
+@property(nonatomic, assign, readwrite) CGFloat scannedImageDuration;
+
 /// Mask the card number digits as they are manually entered by the user. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL maskManualEntryDigits;
 
@@ -123,6 +130,14 @@
 
 /// Set to YES if you need to collect the billing postal code. Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL collectPostalCode;
+
+/// Set to YES if the postal code should only collect numeric input. Defaults to NO. Set this if you know the
+/// <a href="https://en.wikipedia.org/wiki/Postal_code">expected country's postal code</a> has only numeric postal
+/// codes.
+@property(nonatomic, assign, readwrite) BOOL restrictPostalCodeToNumericOnly;
+
+/// Set to YES if you need to collect the cardholder name. Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL collectCardholderName;
 
 /// Set to NO if you don't want the camera to try to scan the card expiration.
 /// Applies only if collectExpiry is also YES.
