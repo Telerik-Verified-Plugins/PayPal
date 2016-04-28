@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2014 PayPal. All rights reserved. -->
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.paypal.cordova.mobilesdk"
     version="3.1.25">
@@ -10,7 +9,7 @@
     <keywords>paypal, sdk, payments</keywords>
     <license>BSD License, see LICENSE.md for details</license>
     <engines>
-            <engine name="cordova" version=">=3.0.0" />
+            <engine name="cordova" version=">=3.5.0" />
     </engines>
 
 
