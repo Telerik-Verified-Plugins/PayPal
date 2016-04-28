@@ -1,3 +1,5 @@
+ext.cdvMinSdkVersion = 16
+
 repositories{
   mavenCentral()
 }
